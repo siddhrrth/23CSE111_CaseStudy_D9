@@ -24,7 +24,7 @@ improving discipline and efficiency.
 |-------|---------------|
 | `Book` | Stores book info and availability status |
 | `Student` | Stores student info and login credentials |
-| `Library` | Core logic —> add, issue, return, delete books and manage records |
+| `Library` | Add, issue, return, delete books and manage records |
 | `Main` | User interaction, menus, and program flow |
 
 ## How to Run the Code

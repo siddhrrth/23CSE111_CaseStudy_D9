@@ -1,3 +1,4 @@
+package Java_Case_Study.JavaImplementation;
 public class Book {
     private String bookId;
     private String title;
@@ -17,13 +18,17 @@ public class Book {
     public String getTitle() {
         return title;
     }
-    public String getAuthor() {
-        return author;
-    }
     public boolean isAvailable() {
         return isAvailable;
     }
     public void setAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
+    }
+    public String toCSV() {
+    	return bookId + ","+title+","+author+","+isAvailable;
+    }
+    public static Book fromCSV(String line) {
+    	String[] data = line.split(",");
+    	return new Book(data[0], data[1], data[2], Boolean.parseBoolean(data[3]));
     }
 }

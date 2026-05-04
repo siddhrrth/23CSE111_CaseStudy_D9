@@ -1,12 +1,11 @@
+package Java_Case_Study.JavaImplementation;
 public class Student {
     private String studentId;
     private String name;
-    private String password;
 
-    public Student(String studentId, String name, String password) {
+    public Student(String studentId, String name) {
         this.studentId = studentId;
         this.name = name;
-        this.password = password;
     }
     public String getStudentId() {
         return studentId;
@@ -15,8 +14,11 @@ public class Student {
     public String getName() {
         return name;
     }
-
-    public String getPassword() {
-        return password;
+    public String toCSV() {
+    	return studentId + ","+name;
+    }
+    public static Student fromCSV(String line) {
+    	String[] data= line.split(",");
+    	return new Student(data[0],data[1]);
     }
 }

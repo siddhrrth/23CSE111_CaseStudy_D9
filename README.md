@@ -38,4 +38,4 @@ javac *.java
 4. Run the main class:
 java Main
 5. Make sure `books.csv` and `borrows.csv` are present in the same
-   directory as the compiled files (or will be auto-created on first run).
+   directory as the compiled files (or will be auto created on first run).

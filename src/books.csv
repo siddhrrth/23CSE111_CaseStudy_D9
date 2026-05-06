@@ -1,15 +1,15 @@
-J101,Effective Java,Joshua Bloch,true
-2,1984,George Orwell,true
-J107,Clean Code,Robert C. Martin,true
-4,Pride and Prejudice,Jane Austen,true
-J103,Head First Java,Kathy Sierra,true
-1,To Kill a Mockingbird,Harper Lee,true
-J109,Design Patterns Elements of Reusable Object Oriented Software,Gang of Four,true
-b123,heidi,johanna,true
-J104,Core Java Volume I Fundamentals,Cay S. Horstmann,true
-3,The Great Gatsby,F. Scott Fitzgerald,true
-J102,Java Concurrency in Practice,Brian Goetz,true
-1,To Kill a Mocking Bird,Harper Lee,true
-J105,Thinking in Java,Bruce Eckel,true
-J108,Test Driven Development By Example,Kent Beck,true
-J106,Spring in Action,Craig Walls,true
+B1,To Kill a Mockingbird,Harper Lee,true
+B2,1984,George Orwell,true
+B3,The Great Gatsby,F. Scott Fitzgerald,true
+B4,Pride and Prejudice,Jane Austen,true
+B5,To Kill a Mocking Bird,Harper Lee,true
+B6,Heidi,Johanna Spyri,true
+B7,Effective Java,Joshua Bloch,true
+B8,Java Concurrency in Practice,Brian Goetz,true
+B9,Head First Java,Kathy Sierra,true
+B10,Core Java Volume I Fundamentals,Cay S. Horstmann,true
+B11,Thinking in Java,Bruce Eckel,true
+B12,Spring in Action,Craig Walls,true
+B13,Clean Code,Robert C. Martin,true
+B14,Test Driven Development By Example,Kent Beck,true
+B15,Design Patterns Elements of Reusable Object Oriented Software,Gang of Four,true

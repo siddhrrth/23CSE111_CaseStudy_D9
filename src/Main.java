@@ -7,6 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
+
             System.out.println("\n===== Library Management System =====");
             System.out.println("1. Admin (Librarian)");
             System.out.println("2. Student");
@@ -18,17 +19,21 @@ public class Main {
 
             if (role == 1) {
                 adminMenu(library, sc);
+
             } else if (role == 2) {
                 studentMenu(library, sc);
+
             } else if (role == 3) {
                 System.out.println("Exiting...");
                 break;
+
             } else {
                 System.out.println("Invalid choice.");
             }
         }
     }
 
+    // ADMIN MENU
     static void adminMenu(Library library, Scanner sc) {
         System.out.println("\n--- Admin Menu ---");
         System.out.println("1. View Books");
@@ -41,8 +46,11 @@ public class Main {
         sc.nextLine();
 
         switch (ch) {
-            case 1 -> library.viewBooks();
-            case 2 -> {
+            case 1:
+                library.viewBooks();
+                break;
+
+            case 2:
                 System.out.print("Book ID: ");
                 String id = sc.nextLine();
                 System.out.print("Title: ");
@@ -50,23 +58,28 @@ public class Main {
                 System.out.print("Author: ");
                 String author = sc.nextLine();
                 library.addBook(new Book(id, title, author, true));
-            }
-            case 3 -> {
+                break;
+
+            case 3:
                 System.out.print("Student ID: ");
                 String sid = sc.nextLine();
                 System.out.print("Book ID: ");
                 String bid = sc.nextLine();
                 library.issueBook(sid, bid);
-            }
-            case 4 -> {
+                break;
+
+            case 4:
                 System.out.print("Book ID: ");
-                String bid = sc.nextLine();
-                library.returnBook(bid);
-            }
-            default -> System.out.println("Invalid option");
+                String bid2 = sc.nextLine();
+                library.returnBook(bid2);
+                break;
+
+            default:
+                System.out.println("Invalid option");
         }
     }
 
+    // STUDENT MENU
     static void studentMenu(Library library, Scanner sc) {
         System.out.print("\nEnter Student ID: ");
         String studentId = sc.nextLine();
@@ -80,9 +93,16 @@ public class Main {
         sc.nextLine();
 
         switch (ch) {
-            case 1 -> library.viewBooks();
-            case 2 -> library.viewIssuedBooksByStudent(studentId);
-            default -> System.out.println("Invalid option");
+            case 1:
+                library.viewBooks();
+                break;
+
+            case 2:
+                library.viewIssuedBooksByStudent(studentId);
+                break;
+
+            default:
+                System.out.println("Invalid option");
         }
     }
 }

@@ -35,16 +35,18 @@ public class Main {
 
     // ADMIN MENU
     static void adminMenu(Library library, Scanner sc) {
+    while (true){
         System.out.println("\n--- Admin Menu ---");
         System.out.println("1. View Books");
         System.out.println("2. Add Book");
         System.out.println("3. Issue Book");
         System.out.println("4. Return Book");
+        System.out.println("5. Exit Admin Menu");
         System.out.print("Choice: ");
 
+        int end=0;
         int ch = sc.nextInt();
         sc.nextLine();
-
         switch (ch) {
             case 1:
                 library.viewBooks();
@@ -74,35 +76,54 @@ public class Main {
                 library.returnBook(bid2);
                 break;
 
+            case 5:
+                end=1;
+                break;
             default:
                 System.out.println("Invalid option");
         }
+        if (end==1){
+            break;
+        }
+        else {
+            end=0;
+        }
+    }
     }
 
     // STUDENT MENU
     static void studentMenu(Library library, Scanner sc) {
         System.out.print("\nEnter Student ID: ");
         String studentId = sc.nextLine();
+        while (true){
+            System.out.println("\n--- Student Menu ---");
+            System.out.println("1. View Available Books");
+            System.out.println("2. View My Issued Books");
+            System.out.println("3. Exit Student Menu");
+            System.out.print("Choice: ");
+            int end=0;
+            int ch = sc.nextInt();
+            sc.nextLine();
 
-        System.out.println("\n--- Student Menu ---");
-        System.out.println("1. View Available Books");
-        System.out.println("2. View My Issued Books");
-        System.out.print("Choice: ");
+            switch (ch) {
+                case 1:
+                    library.viewBooks();
+                    break;
 
-        int ch = sc.nextInt();
-        sc.nextLine();
+                case 2:
+                    library.viewIssuedBooksByStudent(studentId);
+                    break;
+                
+                case 3:
+                    end =1;
+                    break;
 
-        switch (ch) {
-            case 1:
-                library.viewBooks();
-                break;
-
-            case 2:
-                library.viewIssuedBooksByStudent(studentId);
-                break;
-
-            default:
-                System.out.println("Invalid option");
+                default:
+                    System.out.println("Invalid option");
+            }
+        if (end==1){
+            break;
+        }
         }
     }
 }

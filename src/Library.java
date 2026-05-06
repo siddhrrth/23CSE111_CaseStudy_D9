@@ -6,7 +6,8 @@ public class Library {
     private static final String BOOKS_FILE = "books.csv";
     private static final String BORROW_FILE = "borrow_records.csv";
 
-    // ---------------- VIEW ALL BOOKS ----------------
+    // VIEW ALL BOOKS
+
     public void viewBooks() {
         List<String[]> books = FileHandler.readCSV(BOOKS_FILE);
 
@@ -17,22 +18,19 @@ public class Library {
         }
 
         for (String[] b : books) {
-            System.out.println(
-                "ID: " + b[0] +
-                " | Title: " + b[1] +
-                " | Author: " + b[2] +
-                " | Available: " + b[3]
-            );
+            System.out.println( "ID: " + b[0] + " | Title: " + b[1] + " | Author: " + b[2] + " | Available: " + b[3]);
         }
     }
 
-    // ---------------- ADD NEW BOOK ----------------
+    // ADD NEW BOOK
+
     public void addBook(Book book) {
         FileHandler.appendCSV(BOOKS_FILE, book.toString());
         System.out.println("Book added successfully.");
     }
 
-    // ---------------- ISSUE BOOK ----------------
+    // ISSUE BOOK
+
     public void issueBook(String studentId, String bookId) {
         List<String[]> books = FileHandler.readCSV(BOOKS_FILE);
         List<String> updatedBooks = new ArrayList<>();
@@ -47,12 +45,7 @@ public class Library {
                 LocalDate issueDate = LocalDate.now();
                 LocalDate dueDate = issueDate.plusDays(14);
 
-                BorrowRecord record = new BorrowRecord(
-                        studentId,
-                        bookId,
-                        issueDate.toString(),
-                        dueDate.toString()
-                );
+                BorrowRecord record = new BorrowRecord(studentId,bookId,issueDate.toString(),dueDate.toString());
 
                 FileHandler.appendCSV(BORROW_FILE, record.toString());
             }
@@ -68,11 +61,10 @@ public class Library {
         }
     }
 
-    // ---------------- RETURN BOOK ----------------
+    // RETURN BOOK
     public void returnBook(String bookId) {
         List<String[]> books = FileHandler.readCSV(BOOKS_FILE);
         List<String> updatedBooks = new ArrayList<>();
-
         boolean found = false;
 
         for (String[] b : books) {
@@ -92,7 +84,7 @@ public class Library {
         }
     }
 
-    // ---------------- STUDENT VIEW ISSUED BOOKS ----------------
+    // STUDENT VIEW ISSUED BOOKS
     public void viewIssuedBooksByStudent(String studentId) {
         List<String[]> records = FileHandler.readCSV(BORROW_FILE);
 
@@ -101,11 +93,7 @@ public class Library {
 
         for (String[] r : records) {
             if (r[0].equals(studentId)) {
-                System.out.println(
-                        "Book ID: " + r[1] +
-                        " | Issue Date: " + r[2] +
-                        " | Due Date: " + r[3]
-                );
+                System.out.println( "Book ID: " + r[1] + " | Issue Date: " + r[2] + " | Due Date: " + r[3]);
                 found = true;
             }
         }

@@ -47,7 +47,7 @@ Screenshots available in `/output`.
 
 ## Tools & Technologies Used
 - **Language:** Java
-- **Storage:** CSV files (`books.csv`, `borrows.csv`)
+- **Storage:** CSV files (`books.csv`, `borrow_Records.csv`)
 - **Concepts:** Object Oriented Programming, File Handling
 - **Tools:** VS Code
 

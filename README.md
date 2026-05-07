@@ -1,12 +1,12 @@
 # Library Management System
 
 ## Team Members
-| Roll No | Name |
-|---------|------|
-| AM.SC.U4CSE25356 | Varun Nair |
-| AM.SC.U4CSE25349 | Siddharth S |
-| AM.SC.U4CSE25324 | Jeevan A Jacob |
-| AM.SC.U4CSE25342 | Prithew J Raj |
+| Roll No | Name | Roles |
+|---------|------|------|
+| AM.SC.U4CSE25356 | Varun Nair | Library class, UML diagram (Phase 2 doc), borrowRecord class   |
+| AM.SC.U4CSE25324 | Jeevan A Jacob | FileHandler class, UML diagram (Phase 2 doc), Student class |
+| AM.SC.U4CSE25349 | Siddharth S | Book class, borrowRecord class, Phase 1 doc, Github documentation |
+| AM.SC.U4CSE25342 | Prithew J Raj | Main class, Student class, Phase 1 doc, GitHub documentation |
 
 ## Problem Description
 At the start of a semester, students rush to borrow textbooks. Instead of
